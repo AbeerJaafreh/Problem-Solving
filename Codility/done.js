@@ -44,7 +44,6 @@ function OddOccurrencesInArray(A) {
 }
 
 //100%
-
 function CyclicRotation(A, K) {
   if(A.length===0){
     return A
@@ -54,4 +53,13 @@ function CyclicRotation(A, K) {
     A.unshift(A.pop());
   }
   return A;
+}
+//100%
+function FrogJmp(X, Y, D) {
+  // write your code in JavaScript (Node.js 8.9.4)
+  let result = Math.ceil((Y - X) / D);
+  if (X >= Y) {
+    return 0;
+  }
+  return result;
 }
