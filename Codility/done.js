@@ -1,5 +1,5 @@
-
-function binaryGap(N) {
+//100%
+function BinaryGap(N) {
   console.log(N.toString(2));
   let number = N.toString(2);
   let max = 0;
@@ -16,4 +16,42 @@ function binaryGap(N) {
   }
   // write your code in JavaScript (Node.js 8.9.4)
   return max;
+}
+
+/*
+Task Score 66%
+Correctness 80%
+Performance 50%
+*/
+function OddOccurrencesInArray(A) {
+  // write your code in JavaScript (Node.js 8.9.4)
+  let obj = {};
+  for (const iterator of A) {
+    // console.log(iterator);
+    if (!!obj[iterator]) {
+      obj[iterator] += 1;
+    } else {
+      obj[iterator] = 1;
+    }
+  }
+  // console.log(obj);
+  for (const iterator of A) {
+    if (obj[iterator] === 1) {
+      return iterator;
+    }
+  }
+  return 0
+}
+
+//100%
+
+function CyclicRotation(A, K) {
+  if(A.length===0){
+    return A
+  }
+  // write your code in JavaScript (Node.js 8.9.4)
+  for (let index = 0; index < K; index++) {
+    A.unshift(A.pop());
+  }
+  return A;
 }
